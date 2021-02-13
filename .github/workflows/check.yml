@@ -1,0 +1,16 @@
+name: Check
+
+on: [push]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Compile .tex
+        uses: ./
+        with:
+          filename: 'CV/Bogdanov.tex'
