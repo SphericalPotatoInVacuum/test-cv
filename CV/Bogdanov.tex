@@ -1,0 +1,145 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+% LaTeX Template
+% Version 2.0 (8/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Trey Hunner (http://www.treyhunner.com/)
+%
+% Important note:
+% This template requires the resume.cls file to be in the same directory as the
+% .tex file. The resume.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{./resume} % Use the custom resume.cls style
+
+\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{xcolor}% http://ctan.org/pkg/xcolor
+\usepackage{hyperref}% http://ctan.org/pkg/hyperref
+\usepackage{fontawesome}% http://ctan.org/pkg/fontawesome
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!50!red,
+  urlcolor=blue
+}
+
+\name{Bogdanov Alexander} % Your name
+%\address{123 Broadway \\ City, State 12345} % Your address
+%\address{123 Pleasant Lane \\ City, State 12345} % Your secondary addess (optional)
+\address{
+    \faMobile \enspace +7(927)9067999 \\ 
+    \faEnvelopeO \enspace \href{mailto:a@bogdanov.co}{a@bogdanov.co} \\ 
+    \faGithub \enspace \href{https://github.com/SphericalPotatoInVacuum}{github.com/SphericalPotatoInVacuum}
+}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{EDUCATION}
+    \begin{rSubsubsection}{Higher School of Economics, Moscow}{Sep 2019 -- Expected Jun 2023}{Bachelor in Applied Mathematics and Computer Science}{GPA: 8.68/10.0}
+    \end{rSubsubsection}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{WORK EXPERIENCE}
+    \begin{rSubsection}{Software Engineering Intern}{Sep 2020 -- Dec 2020}{\textbf{Sibur}}{Moscow, Russia}
+        \item Improved path finding algorithm by implementing new rules and restrictions, which resulted in average commute time reduction by approximately 50\%
+        \item Researched the possibility of gRPC framework usage to transfer files larger than 500 MB
+        \item Automated the updating of the bus routes in the monitoring app by implementing a Java API interface
+    \end{rSubsection}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	TECHNICAL STRENGTHS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Technical Skills}
+
+    \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l}
+        Programming Languages & C++, Python, Java                       \\
+        Technologies          & JSON, REST, SQL, HTML, CSS, LaTeX \\
+        Tools                 & Git, Docker, Linux
+    \end{tabular}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	Personal Projects SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Personal Projects}
+    \begin{rSubsection}{\href{https://github.com/SphericalPotatoInVacuum/lksh_sport}{lksh-sport}}{}{}{}
+        \item Implemented \textbf{REST API} for the sports site using \textbf{Python} and \textbf{Flask}, that processed approximately 200 teams and players registration requests
+        \item Developed a telegram bot using \textbf{Python} allowing the administrator to approve or decline the requests
+    \end{rSubsection}
+    \begin{rSubsection}{\href{https://github.com/SphericalPotatoInVacuum/RuzoomBot}{RuzoomBot}}{}{}{}
+        \item Developed a telegram bot using \textbf{Python} that gets information from the university timetable API and sends notifications about upcoming classes to subscribed chats
+    \end{rSubsection}
+    \begin{rSubsection}{\href{https://github.com/DKozl50/ya_dixit}{Imaginarium (Dixit)}}{}{}{}
+        \item Developed backend for the online version of a game Dixit using \textbf{Python}
+        \item Created the UI design using \textbf{HTML5} and \textbf{CSS3}, deployed the project using \textbf{Heroku}
+    \end{rSubsection}
+    \begin{rSubsection}{\href{https://github.com/SphericalPotatoInVacuum/FlappyAI}{Flappy AI}}{}{}{}
+        \item Created a clone of a flappy bird game using \textbf{HTML5} and \textbf{JS}
+        \item Developed a self-playing mode using a single \textbf{perceptron} and a \textbf{genetical algorithm} to update the population
+    \end{rSubsection}
+    \begin{rSubsection}{\href{https://github.com/SphericalPotatoInVacuum/TheatreBooker}{TheatreBooker}}{}{}{}
+        \item Developed frontend for an app that allows to book tickets in the theater using \textbf{JS}, \textbf{HTML5} and \textbf{electron}
+        \item Implemented \textbf{REST API} for the frontend to get booked seats, book new ones and cancel booking, using \textbf{Python}, \textbf{Flask} and \textbf{SQLite}
+    \end{rSubsection}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	ACHIEVEMENTS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Achievements}
+    \begin{rSubsection}
+        {GSOM-Hack Hackathon}{2020}{Winner}{}
+        \item Solved the given task as a Pickup and Delivery Problem with Time Windows using a \textbf{genetic algorithm} written in \textbf{C++}, showing results 3 times better than the next competitor
+        \item As a result, the team was invited for the internship at Sibur
+    \end{rSubsection}
+    \begin{rSubsubsection}
+        {All Russian team programming Olympiad}{2018}{Finalist - 124th place of about 500}{}
+    \end{rSubsubsection}
+    \begin{rSubsubsection}
+        {All Russian Olympics <<Information Technologies>>}{2018}{Gold medalist - 17th place of about 1400}{}
+    \end{rSubsubsection}
+    \begin{rSubsubsection}
+        {All Russian project contest <<Great Challenges>>}{2018}{Winner - member of one of 12 winning teams out of more than 40,000 participants}{}
+    \end{rSubsubsection}
+\end{rSection}
+
+
+%----------------------------------------------------------------------------------------
+%	EXAMPLE SECTION
+%----------------------------------------------------------------------------------------
+
+%\begin{rSection}{Section Name}
+
+%Section content\ldots
+
+%\end{rSection}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
