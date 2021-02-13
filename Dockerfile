@@ -13,5 +13,5 @@ RUN dnf install -y 'tex(cm-super-t2a.enc)'
 WORKDIR /build
 
 COPY . .
-RUN chmod +x build_resume.sh
-ENTRYPOINT ["./build_resume.sh"]
+
+ENTRYPOINT ["bash", "build_resume.sh"]
