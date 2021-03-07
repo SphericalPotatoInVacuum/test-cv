@@ -29,7 +29,7 @@
 \pagestyle{empty} % Suppress page numbers
 \usepackage{titlesec}
 \setlength{\parskip}{3pt}
-\setlength{\parindent}{1em}
+\setlength{\parindent}{0em}
 %----------------------------------------------------------------------------------------
 %	HEADINGS COMMANDS: Commands for printing name and address
 %----------------------------------------------------------------------------------------
@@ -69,7 +69,7 @@
 % \printname is used to print the name as a page header
 \def \printname {
   \begingroup
-    \hfil{\MakeUppercase{\namesize\bf \@name}}\hfil
+    \hfil{\namesize\bf \@name}\hfil
     \nameskip\break
   \endgroup
 }
