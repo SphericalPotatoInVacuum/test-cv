@@ -14,4 +14,12 @@ jobs:
         uses: ./
         with:
           filename: 'CV/Bogdanov.tex'
-
+          
+      - name: Commit compiled pdf files
+        run: |
+          git add -f **.pdf
+          author=${GITHUB_ACTOR:=github-actions}
+          git config user.name "$author"
+          git config user.email "$author@users.noreply.github.com"
+          git commit --allow-empty -m "Actualize pdf"
+          git push

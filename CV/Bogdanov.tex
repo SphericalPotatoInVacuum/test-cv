@@ -22,11 +22,9 @@
 
 \documentclass{./resume} % Use the custom resume.cls style
 
-\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
-
-\usepackage[T2A]{fontenc}
+\usepackage[left=0.5in,top=0.5in,right=0.5in,bottom=0.5in]{geometry} % Document margins
+\usepackage[sfdefault]{roboto}
 \usepackage[utf8]{inputenc}
-\usepackage[russian]{babel}
 \usepackage{xcolor}% http://ctan.org/pkg/xcolor
 \usepackage{hyperref}% http://ctan.org/pkg/hyperref
 \usepackage{fontawesome}% http://ctan.org/pkg/fontawesome
@@ -40,7 +38,7 @@
 %\address{123 Broadway \\ City, State 12345} % Your address
 %\address{123 Pleasant Lane \\ City, State 12345} % Your secondary addess (optional)
 \address{
-    \faMobile \enspace +7(927)9067999 \\ 
+    \faMobile \enspace +79279067999 \\ 
     \faEnvelopeO \enspace \href{mailto:a@bogdanov.co}{a@bogdanov.co} \\ 
     \faGithub \enspace \href{https://github.com/SphericalPotatoInVacuum}{github.com/SphericalPotatoInVacuum}
 }
@@ -57,29 +55,50 @@
 \end{rSection}
 
 %----------------------------------------------------------------------------------------
-%	WORK EXPERIENCE SECTION
-%----------------------------------------------------------------------------------------
-
-\begin{rSection}{WORK EXPERIENCE}
-    \begin{rSubsection}{Software Engineering Intern}{Sep 2020 -- Dec 2020}{\textbf{Sibur}}{Moscow, Russia}
-        \item Improved path finding algorithm by implementing new rules and restrictions, which resulted in average commute time reduction by approximately 50\%
-        \item Researched the possibility of gRPC framework usage to transfer files larger than 500 MB
-        \item Automated the updating of the bus routes in the monitoring app by implementing a Java API interface
-    \end{rSubsection}
-\end{rSection}
-
-%----------------------------------------------------------------------------------------
-%	TECHNICAL STRENGTHS SECTION
+%	TECHNICAL SKILLS SECTION
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Technical Skills}
 
     \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l}
-        Programming Languages & C++, Python, Java                       \\
-        Technologies          & JSON, REST, SQL, HTML, CSS, LaTeX \\
-        Tools                 & Git, Docker, Linux
+        Programming Languages & Production: C++, Python                \\
+                              & Familiar with: C, JavaScript, Go, Java \\
+        Technologies          & Git, Docker, Linux, SQL
     \end{tabular}
 
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{WORK EXPERIENCE}
+    \begin{rSubsection}{Software Engineering Intern}{Jul 2021 -- Oct 2021}{\textbf{Yandex}}{Moscow, Russia}
+        \item Wrote a \textbf{Python} \textbf{gRPC} client library to send
+        requests to microservice management system,
+        updated all relevant \textbf{unit tests} to use new client
+        \item Refactored logging system by eliminating unnecessary inheritance
+        and overcomplication, resulting in 1000 lines codebase size reduction
+        and providing new abilities for enforcing thread safety
+        \item Set up static code style checks for project with 50'000 lines of
+        \textbf{C++} code
+    \end{rSubsection}
+
+    \begin{rSubsection}{Software Engineering Intern}{Sep 2020 -- Dec 2020}{\textbf{Sibur}}{Moscow, Russia}
+        \item Helped gather data from 1500 employees and prepare it for route
+        finding algorithm using \textbf{pandas} and generated pdf timetables
+        from the output using \textbf{Python}
+        \item Researched possibility of using \textbf{gRPC} to transfer large
+        files (up to 10GB)
+        \item Developed \href{https://www.sibur.ru/bus/}{website} using
+        \textbf{React.js} that aggregates all monitoring links from
+        different cities
+        \item Developed \textbf{Java} library for easier calls
+        to \textbf{API} that enabled automated updates of bus routes and
+        saved hundreds of man-hours
+        \item Developed \textbf{Java} library for automation
+        of calculations that were previously carried out in excel
+    \end{rSubsection}
 \end{rSection}
 
 %----------------------------------------------------------------------------------------
@@ -87,20 +106,13 @@
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Personal Projects}
-    \begin{rSubsection}{lksh-sport}{\url{https://github.com/SphericalPotatoInVacuum/lksh_sport}}{}{}
-        \item Implemented \textbf{REST API} for the sports site using \textbf{Python} and \textbf{Flask}, that processed approximately 200 teams and players registration requests
-        \item Developed a telegram bot using \textbf{Python} allowing the administrator to approve or decline the requests
-    \end{rSubsection}
-    \begin{rSubsection}{RuzoomBot}{\url{https://github.com/SphericalPotatoInVacuum/RuzoomBot}}{}{}
-        \item Developed a telegram bot using \textbf{Python} that gets information from the university timetable API and sends notifications about upcoming classes to subscribed chats
-    \end{rSubsection}
-    \begin{rSubsection}{Imaginarium (Dixit)}{\url{https://github.com/DKozl50/ya_dixit}}{}{}
-        \item Developed backend for the online version of a game Dixit using \textbf{Python}
-        \item Created the UI design using \textbf{HTML5} and \textbf{CSS3}, deployed the project using \textbf{Heroku}
-    \end{rSubsection}
-    \begin{rSubsection}{Flappy AI}{\url{https://github.com/SphericalPotatoInVacuum/FlappyAI}}{}{}
-        \item Created a clone of a flappy bird game using \textbf{HTML5} and \textbf{JS}
-        \item Developed a self-playing mode using a single \textbf{perceptron} and a \textbf{genetical algorithm} to update the population
+    \begin{rSubsection}{\href{https://github.com/SphericalPotatoInVacuum/lksh_sport}{lksh-sport}}{}{}{}
+        \item Implemented \textbf{REST API} for sports website using
+        \textbf{Python}, \textbf{Flask} and \textbf{sqlalchemy} that
+        has processed multiple hundreds requests for user, team and event registrations
+        and many more for events management. Has been used for 6 studying seasons and continues to work for this day.
+        \item Developed telegram bot using \textbf{Python} for ease of approving
+        or declining requests by administrator
     \end{rSubsection}
     \begin{rSubsection}{TheatreBooker}{\url{https://github.com/SphericalPotatoInVacuum/TheatreBooker}}{}{}
         \item Developed frontend for an app that allows to book tickets in the theater using \textbf{JS}, \textbf{HTML5} and \textbf{electron}
@@ -114,13 +126,12 @@
 
 \begin{rSection}{Achievements}
     \begin{rSubsection}
-        {GSOM-Hack Hackathon}{2020}{Winner}{}
-        \item Solved the given task as a Pickup and Delivery Problem with Time Windows using a \textbf{genetic algorithm} written in \textbf{C++}, showing results 3 times better than the next competitor
-        \item As a result, the team was invited for the internship at Sibur
+        {GSOM-Hack Hackathon}{2020}{}{}
+        \item Solved task as Pickup and Delivery Problem with Time Windows using
+        \textbf{genetic algorithm} written in \textbf{C++} showing
+        results \textbf{3 times better} than next competitor
+        \item Won the hackathon and was invited to the internship at Sibur with my team
     \end{rSubsection}
-    \begin{rSubsubsection}
-        {All Russian team programming Olympiad}{2018}{Finalist - 124th place of about 500}{}
-    \end{rSubsubsection}
     \begin{rSubsubsection}
         {All Russian Olympics <<Information Technologies>>}{2018}{Gold medalist - 17th place of about 1400}{}
     \end{rSubsubsection}
@@ -128,18 +139,5 @@
         {All Russian project contest <<Great Challenges>>}{2018}{Winner - member of one of 12 winning teams out of more than 40,000 participants}{}
     \end{rSubsubsection}
 \end{rSection}
-
-
-%----------------------------------------------------------------------------------------
-%	EXAMPLE SECTION
-%----------------------------------------------------------------------------------------
-
-%\begin{rSection}{Section Name}
-
-%Section content\ldots
-
-%\end{rSection}
-
-%----------------------------------------------------------------------------------------
 
 \end{document}
