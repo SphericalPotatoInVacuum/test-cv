@@ -14,9 +14,6 @@ jobs:
         uses: ./
         with:
           filename: 'CV/Bogdanov.tex'
-<<<<<<< HEAD
-
-=======
       - name: Commit compiled pdf files
         run: |
           echo $(pwd)
@@ -28,4 +25,3 @@ jobs:
           git commit --allow-empty -m "Actualize pdf"
       - name: Push changes
         run: git push origin master
->>>>>>> e4ecd09 (Update resume)
