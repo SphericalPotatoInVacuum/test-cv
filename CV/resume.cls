@@ -28,15 +28,10 @@
 
 \pagestyle{empty} % Suppress page numbers
 \usepackage{titlesec}
-<<<<<<< HEAD
-\setlength{\parskip}{3pt}
-\setlength{\parindent}{0em}
-=======
 \setlength{\parskip}{0.5em}
 \setlength{\parindent}{0em}
 \renewcommand{\baselinestretch}{1.0}
 
->>>>>>> e4ecd09 (Update resume)
 %----------------------------------------------------------------------------------------
 %	HEADINGS COMMANDS: Commands for printing name and address
 %----------------------------------------------------------------------------------------
