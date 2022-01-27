@@ -1,5 +1,5 @@
 name: 'Test cv'
-description: 'Test if your cv can be compiled using xelatex'
+description: 'Test if your cv can be compiled using lualatex'
 inputs:
   filename:
     description: 'The name of your cv .tex file with path'

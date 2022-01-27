@@ -1,13 +1,13 @@
-FROM fedora:31
+FROM archlinux:latest
 
-RUN dnf install -y texlive-collection-basic
+RUN pacman -Sy && \
+    pacman -S --noconfirm sudo texlive-core
 
-RUN dnf install -y 'tex(parskip.sty)'
-RUN dnf install -y 'tex(titlesec.sty)'
-RUN dnf install -y texlive-lh
-RUN dnf install -y 'tex(fontawesome.sty)'
-RUN dnf install -y 'tex(roboto.sty)'
-RUN dnf install -y 'tex(cm-super-t2a.enc)'
+RUN sed -i 's|$Master = "$Master/../..";|$Master = "${Master}/../../..";|' /usr/share/texmf-dist/scripts/texlive/tlmgr.pl
+ENV tlmgr='/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode'
+RUN $tlmgr init-usertree
+RUN $tlmgr option repository http://mirrors.rit.edu/CTAN/systems/texlive/tlnet
+RUN $tlmgr install enumitem xifthen ifmtarg fontawesome sourcesanspro tcolorbox environ trimspaces roboto
 
 WORKDIR /build
 

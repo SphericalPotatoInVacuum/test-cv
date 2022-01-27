@@ -1,143 +1,109 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Medium Length Professional CV
-% LaTeX Template
-% Version 2.0 (8/5/13)
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
 %
 % This template has been downloaded from:
-% http://www.LaTeXTemplates.com
+% https://github.com/posquit0/Awesome-CV
 %
-% Original author:
-% Trey Hunner (http://www.treyhunner.com/)
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
 %
-% Important note:
-% This template requires the resume.cls file to be in the same directory as the
-% .tex file. The resume.cls file provides the resume style used for structuring the
-% document.
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
 %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
 
-\documentclass{./resume} % Use the custom resume.cls style
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[12pt, a4paper]{awesome-cv}
 
-\usepackage[left=0.5in,top=0.5in,right=0.5in,bottom=0.5in]{geometry} % Document margins
-\usepackage[sfdefault]{roboto}
-\usepackage[utf8]{inputenc}
-\usepackage{xcolor}% http://ctan.org/pkg/xcolor
-\usepackage{hyperref}% http://ctan.org/pkg/hyperref
-\usepackage{fontawesome}% http://ctan.org/pkg/fontawesome
-\hypersetup{
-  colorlinks=true,
-  linkcolor=blue!50!red,
-  urlcolor=blue
-}
+% Configure page margins with geometry
+\geometry{left=1.0cm, top=.6cm, right=1.0cm, bottom=0.6cm, footskip=.5cm}
 
-\name{Alexander Bogdanov} % Your name
-%\address{123 Broadway \\ City, State 12345} % Your address
-%\address{123 Pleasant Lane \\ City, State 12345} % Your secondary addess (optional)
-\address{
-    \faMobile \enspace +79279067999 \\ 
-    \faEnvelopeO \enspace \href{mailto:a@bogdanov.co}{a@bogdanov.co} \\ 
-    \faGithub \enspace \href{https://github.com/SphericalPotatoInVacuum}{github.com/SphericalPotatoInVacuum}
-}
+% Specify the location of the included fonts
+\fontdir[fonts/]
 
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-darknight}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{CA63A8}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+% \photo{./examples/profile.png}
+\name{Alexander}{Bogdanov}
+%\position{Software Engineering Intern}
+%\address{42-8, Bangbae-ro 15-gil, Seocho-gu, Seoul, 00681, Rep. of KOREA}
+
+\mobile{(+7) 927-906-7999}
+\email{a@bogdanov.co}
+%\homepage{www.posquit0.com}
+\github{SphericalPotatoInVacuum}
+%\linkedin{posquit0}
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \twitter{@twit}
+% \skype{skype-id}
+% \reddit{reddit-id}
+% \medium{madium-id}
+% \googlescholar{googlescholar-id}{name-to-display}
+%% \firstname and \lastname will be used
+% \googlescholar{googlescholar-id}{}
+% \extrainfo{extra informations}
+
+%\quote{``Be the change that you want to see in the world."}
+
+
+%-------------------------------------------------------------------------------
 \begin{document}
 
-%----------------------------------------------------------------------------------------
-%	EDUCATION SECTION
-%----------------------------------------------------------------------------------------
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader
 
-\begin{rSection}{EDUCATION}
-    \begin{rSubsubsection}{Higher School of Economics, Moscow}{Sep 2019 -- Expected Jun 2023}{Bachelor in Applied Mathematics and Computer Science}{GPA: 8.68/10.0}
-    \end{rSubsubsection}
-\end{rSection}
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+%\makecvfooter
+%{}
+%{}
+%{}
 
-%----------------------------------------------------------------------------------------
-%	TECHNICAL SKILLS SECTION
-%----------------------------------------------------------------------------------------
 
-\begin{rSection}{Technical Skills}
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%-------------------------------------------------------------------------------
+\input{cv/education.tex}
+\input{cv/skills.tex}
+\input{cv/experience.tex}
+\input{cv/projects.tex}
+\input{cv/honors.tex}
+%\input{cv/presentation.tex}
+%\input{cv/writing.tex}
+%\input{cv/committees.tex}
 
-    \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l}
-        Programming Languages & Production: C++, Python                \\
-                              & Familiar with: C, JavaScript, Go, Java \\
-        Technologies          & Git, Docker, Linux, SQL
-    \end{tabular}
 
-\end{rSection}
-
-%----------------------------------------------------------------------------------------
-%	WORK EXPERIENCE SECTION
-%----------------------------------------------------------------------------------------
-
-\begin{rSection}{WORK EXPERIENCE}
-    \begin{rSubsection}{Software Engineering Intern}{Jul 2021 -- Oct 2021}{\textbf{Yandex}}{Moscow, Russia}
-        \item Wrote a \textbf{Python} \textbf{gRPC} client library to send
-        requests to microservice management system,
-        updated all relevant \textbf{unit tests} to use new client
-        \item Refactored logging system by eliminating unnecessary inheritance
-        and overcomplication, resulting in 1000 lines codebase size reduction
-        and providing new abilities for enforcing thread safety
-        \item Set up static code style checks for project with 50'000 lines of
-        \textbf{C++} code
-    \end{rSubsection}
-
-    \begin{rSubsection}{Software Engineering Intern}{Sep 2020 -- Dec 2020}{\textbf{Sibur}}{Moscow, Russia}
-        \item Helped gather data from 1500 employees and prepare it for route
-        finding algorithm using \textbf{pandas} and generated pdf timetables
-        from the output using \textbf{Python}
-        \item Researched possibility of using \textbf{gRPC} to transfer large
-        files (up to 10GB)
-        \item Developed \href{https://www.sibur.ru/bus/}{website} using
-        \textbf{React.js} that aggregates all monitoring links from
-        different cities
-        \item Developed \textbf{Java} library for easier calls
-        to \textbf{API} that enabled automated updates of bus routes and
-        saved hundreds of man-hours
-        \item Developed \textbf{Java} library for automation
-        of calculations that were previously carried out in excel
-    \end{rSubsection}
-\end{rSection}
-
-%----------------------------------------------------------------------------------------
-%	Personal Projects SECTION
-%----------------------------------------------------------------------------------------
-
-\begin{rSection}{Personal Projects}
-    \begin{rSubsection}{\href{https://github.com/SphericalPotatoInVacuum/lksh_sport}{lksh-sport}}{}{}{}
-        \item Implemented \textbf{REST API} for sports website using
-        \textbf{Python}, \textbf{Flask} and \textbf{sqlalchemy} that
-        has processed multiple hundreds requests for user, team and event registrations
-        and many more for events management. Has been used for 6 studying seasons and continues to work for this day.
-        \item Developed telegram bot using \textbf{Python} for ease of approving
-        or declining requests by administrator
-    \end{rSubsection}
-    \begin{rSubsection}{TheatreBooker}{\url{https://github.com/SphericalPotatoInVacuum/TheatreBooker}}{}{}
-        \item Developed frontend for an app that allows to book tickets in the theater using \textbf{JS}, \textbf{HTML5} and \textbf{electron}
-        \item Implemented \textbf{REST API} for the frontend to get booked seats, book new ones and cancel booking, using \textbf{Python}, \textbf{Flask} and \textbf{SQLite}
-    \end{rSubsection}
-\end{rSection}
-
-%----------------------------------------------------------------------------------------
-%	ACHIEVEMENTS SECTION
-%----------------------------------------------------------------------------------------
-
-\begin{rSection}{Achievements}
-    \begin{rSubsection}
-        {GSOM-Hack Hackathon}{2020}{}{}
-        \item Solved task as Pickup and Delivery Problem with Time Windows using
-        \textbf{genetic algorithm} written in \textbf{C++} showing
-        results \textbf{3 times better} than next competitor
-        \item Won the hackathon and was invited to the internship at Sibur with my team
-    \end{rSubsection}
-    \begin{rSubsubsection}
-        {All Russian Olympics <<Information Technologies>>}{2018}{Gold medalist - 17th place of about 1400}{}
-    \end{rSubsubsection}
-    \begin{rSubsubsection}
-        {All Russian project contest <<Great Challenges>>}{2018}{Winner - member of one of 12 winning teams out of more than 40,000 participants}{}
-    \end{rSubsubsection}
-\end{rSection}
-
+%-------------------------------------------------------------------------------
 \end{document}

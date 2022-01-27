@@ -1,0 +1,45 @@
+%-------------------------------------------------------------------------------
+%	SECTION TITLE
+%-------------------------------------------------------------------------------
+\cvsection{Experience}
+
+
+%-------------------------------------------------------------------------------
+%	CONTENT
+%-------------------------------------------------------------------------------
+\begin{cventries}
+
+  %---------------------------------------------------------
+  \cventry
+  {Software Engineering Intern} % Job title
+  {Yandex} % Organization
+  {Moscow, Russia} % Location
+  {Jul 2021 -- Oct 2021} % Date(s)
+  {
+    \begin{cvitems} % Description(s) of tasks/responsibilities
+      \item Developed Python gRPC client library to send requests to microservice management system. Using it instead of separate executable
+      reduced request time by 85\% and number of lines of code required to make requests by 50\%.
+      \item Refactored logging system by eliminating unnecessary inheritance and overcomplication, resulting in 1000 lines codebase size reduction, improving readability
+      and providing new possibilities for enforcing thread safety as well as new features, that helped fix race condition in multiple unit tests.
+      \item Introduced static code style checks for project with 50'000 lines of C++ code and refactored project to comply with new requirements.
+    \end{cvitems}
+  }
+
+  %---------------------------------------------------------
+  \cventry
+  {Software Engineering Intern} % Job title
+  {Sibur} % Organization
+  {Moscow, Russia} % Location
+  {Sep 2020 -- Dec 2020} % Date(s)
+  {
+    \begin{cvitems} % Description(s) of tasks/responsibilities
+      \item Proposed location and workday data gathering pipeline from employees, getting data from more than 1500 people. Prepared it for route finding algorithm using pandas. Created converter from algorithm output to pdf timetables for employees and bus drivers using Python.
+      \item Proposed way of transferring large files (up to 10GB) using gRPC, enabling robust data upload to route finding computation unit.
+      \item Developed aggregator \href{https://www.sibur.ru/bus/}{website} of bus monitoring links for different cities using React.js, allowing users to easily access relevant link when doing business trips.
+      \item Implemented Java library for easier calls to API that enabled automated updates of bus routes, eliminating whole workday of manual work every week.
+      \item Created Java library for automation of calculations that were previously carried out in excel, removing human link from production chain, increasing performance and reliability.
+    \end{cvitems}
+  }
+
+  %---------------------------------------------------------
+\end{cventries}
