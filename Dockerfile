@@ -7,7 +7,7 @@ RUN sed -i 's|$Master = "$Master/../..";|$Master = "${Master}/../../..";|' /usr/
 ENV tlmgr='/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode'
 RUN $tlmgr init-usertree
 RUN $tlmgr option repository http://mirrors.rit.edu/CTAN/systems/texlive/tlnet
-RUN $tlmgr install enumitem xifthen ifmtarg fontawesome sourcesanspro tcolorbox environ trimspaces roboto
+RUN for package in enumitem xifthen ifmtarg fontawesome sourcesanspro tcolorbox environ trimspaces roboto; do $tlmgr install $package; done
 
 WORKDIR /build
 
