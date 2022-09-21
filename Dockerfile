@@ -1,7 +1,7 @@
 FROM archlinux:latest
 
 RUN pacman -Sy && \
-    pacman -S --noconfirm sudo texlive-core
+    pacman -S --noconfirm sudo texlive-most
 
 RUN sed -i 's|$Master = "$Master/../..";|$Master = "${Master}/../../..";|' /usr/share/texmf-dist/scripts/texlive/tlmgr.pl
 ENV tlmgr='/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode'
